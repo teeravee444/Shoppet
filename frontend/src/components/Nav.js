@@ -33,7 +33,8 @@ const Nav = () => {
 }
 
 const Navbar = styled.div`
-padding: 2% 2% 0 2%;
+
+padding: 2%  2% 0% 2%;
 background: ${props => props.theme.background};
 display: flex;
 justify-content: space-between;
@@ -46,7 +47,7 @@ list-style-type: none;
 li{
     
     margin: 0 10px;
-    font-size: 150%;
+    font-size: 175%;
     font-weight: bold;
     a{
         /* padding: 3% 3% 5% 3%; */
@@ -54,14 +55,17 @@ li{
         border-top-right-radius: 10px;
         color: ${props => props.theme.color};
         text-decoration: none;
+        
         :hover{
             background: white;
+            
             color: ${props => props.theme.hoverColor};
-            transition: .25s;
+            transition: 1.25s;
         }
     }
 }
 .activeTab{
+    margin-bottom: 20px;
     background: white;
     color: ${props => props.theme.hoverColor};
     transition: .25s;

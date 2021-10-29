@@ -1,10 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import Nav from './components/Nav'
+import Routes from './routes/Route'
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello React</h1>
+      <Nav />
+      <Routes />
     </div>
   );
 }

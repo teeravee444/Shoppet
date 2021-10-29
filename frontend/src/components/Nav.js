@@ -1,0 +1,71 @@
+import React from 'react'
+import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
+import theme from '../config/Theme.json'
+
+const Nav = () => {
+    return (
+        <Navbar theme={theme}>
+            {/* Routing */}
+            <Menu theme={theme}>
+                <li>
+                    <NavLink to="/" activeClassName="activeTab" exact>Home</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/farm" activeClassName="activeTab" exact>Farm</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/about" activeClassName="activeTab" exact>About</NavLink>
+                </li>
+            </Menu>
+
+            {/* Auth Routes */}
+            <Menu theme={theme}>
+                <li>
+                    <NavLink to="/login" activeClassName="activeTab" exact>Login</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/register" activeClassName="activeTab" exact>Register</NavLink>
+                </li>
+            </Menu>
+        </Navbar>
+    )
+}
+
+const Navbar = styled.div`
+padding: 2% 2% 0 2%;
+background: ${props => props.theme.background};
+display: flex;
+justify-content: space-between;
+`
+const Menu = styled.ul`
+margin: 0;
+padding: 0;
+display: flex;
+list-style-type: none;
+li{
+    
+    margin: 0 10px;
+    font-size: 150%;
+    font-weight: bold;
+    a{
+        /* padding: 3% 3% 5% 3%; */
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: ${props => props.theme.color};
+        text-decoration: none;
+        :hover{
+            background: white;
+            color: ${props => props.theme.hoverColor};
+            transition: .25s;
+        }
+    }
+}
+.activeTab{
+    background: white;
+    color: ${props => props.theme.hoverColor};
+    transition: .25s;
+}
+`
+
+export default Nav

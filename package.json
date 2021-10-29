@@ -18,10 +18,8 @@
   },
   "homepage": "https://github.com/teeravee444/Shoppet#readme",
   "dependencies": {
-    "@emotion/react": "^11.5.0",
-    "@emotion/styled": "^11.3.0",
-    "@mui/material": "^5.0.6",
-    "@mui/styled-engine-sc": "^5.0.4",
-    "styled-components": "^5.3.3"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.14"
   }
 }

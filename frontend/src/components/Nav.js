@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import theme from '../config/Theme.json'
-
+import Drawer from '../components/drawer/RightDrawer'
 const Nav = () => {
     return (
         <Navbar theme={theme}>
@@ -27,6 +27,9 @@ const Nav = () => {
                 <li>
                     <NavLink to="/register" activeClassName="activeTab" exact>Register</NavLink>
                 </li>
+                
+                <Drawer />
+
             </Menu>
         </Navbar>
     )

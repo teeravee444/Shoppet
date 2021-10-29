@@ -1,16 +1,21 @@
-import React from 'react'
-
-//import mui
+import React, { useState } from "react";
+import countries from "../config/countries";
+import AutoComplete from '../components/inp/AutoComplete'
+import AutoComplete1 from '../components/inp/AutoComplete1'
 
 
 const Home = () => {
-    return (
-        <div>
-            
-            <h1>Home Page</h1>
-            <button onClick={localStorage.setItem('jwt',{name: 'test user'})}>Create JWT</button>
-        </div>
-    )
-}
+    const [data, setData] = useState()
 
-export default Home
+  return (
+    <div>
+      <h1>Home Page</h1>
+      <p>Country: {data}</p>
+      <AutoComplete data={countries} val={data} changeVal={()=>setData()} />
+      <AutoComplete1 />
+
+    </div>
+  );
+};
+
+export default Home;

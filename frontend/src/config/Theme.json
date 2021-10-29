@@ -1,5 +1,8 @@
 {
     "background": "#B704DE",
     "color": "white",
-    "hoverColor": "black"
+    "hoverColor": "black",
+    "marginFig" : "10px 0px 10px 0px",
+    "border" : "10px solide black"
+    
 }

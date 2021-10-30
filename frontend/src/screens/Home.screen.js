@@ -8,6 +8,7 @@ import {CardProduct1,CardProduct2,CardProduct3,CardProduct4,CardProduct5,CardPro
 
 
 import Imagescrool from "../components/imgscrool/Imagescrool";
+import Footer from '../components/Footer';
 
 // const Item = styled(Paper)(({ theme }) => ({
 //   ...theme.typography.body2,
@@ -83,6 +84,7 @@ const Home = () => {
       <CardProduct8 />
       </DivSlide>
     </Layout>
+    <Footer />
     </ContainerDiv>
   );
 };
@@ -98,7 +100,7 @@ margin-right: 10px;
 `
 
 const ContainerDiv =styled.div ` 
-margin: 20px 20px 10px 20px;
+margin: 20px 20px 10px 10px;
 justify-content: flex-start;
 /* border-radius: ${props => props.Theme.border}; */
 border-radius: 10px;

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import theme from '../config/Theme.json'
 import Drawer from '../components/drawer/RightDrawer'
-
+import Search from '../components/Search'
 const Nav = () => {
     
     return (
@@ -15,7 +15,7 @@ const Nav = () => {
                     <NavLink to="/" activeClassName="activeTab" exact>Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/farm" activeClassName="activeTab" exact>Farm</NavLink>
+                    <NavLink to="/farm" activeClassName="activeTab" exact>Product</NavLink>
                 </li>
                 <li>
                     <NavLink to="/about" activeClassName="activeTab" exact>About</NavLink>
@@ -27,9 +27,7 @@ const Nav = () => {
                 <li>
                     <NavLink to="/login" activeClassName="activeTab" exact>Login</NavLink>
                 </li>
-                <li>
-                    <NavLink to="/register" activeClassName="activeTab" exact>Register</NavLink>
-                </li>
+               
                 
                 <Drawer />
 

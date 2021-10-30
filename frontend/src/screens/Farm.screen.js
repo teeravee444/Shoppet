@@ -1,51 +1,90 @@
-import React from 'react'
-import Pagination from '../components/Pagination/Pagination';
-import styled from 'styled-components';
-import {CardProduct1,CardProduct2,CardProduct3,CardProduct4,CardProduct5,CardProduct6,CardProduct7,CardProduct8}  from '../components/Card/CardProduct';
+import React from "react";
 
+// component
+import {
+    CardProduct1,
+    CardProduct2,
+    CardProduct3,
+    CardProduct4,
+    CardProduct5,
+    CardProduct6,
+    CardProduct7,
+    CardProduct8,
+  } from "../components/Card/CardProduct";
+  import Styled from 'styled-components';
+
+// MUI 
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import { styled } from '@mui/material/styles';
+import Footer from "../components/Footer";
+
+// MUI layout 
+const Item = styled(Paper)(({ theme }) => ({
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  }));
 const Farm = () => {
-    return (
-        <ContainerDiv>
-           <Layout>    
-             <DivSlide30>
-                 A
-             </DivSlide30>
-             <Divslide70>
-                 <CardProduct1 />
-                 <CardProduct2 />
-                 <CardProduct3 />
-                 <CardProduct4 />
-             </Divslide70>
-             <Divslide70>
-             <CardProduct5 />
-                 <CardProduct6 />
-                 <CardProduct7 />
-                 <CardProduct8 />
-             </Divslide70>
-           </Layout>
-        </ContainerDiv>
-    )
-}
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+         <Grid container spacing={2}>
+        <Grid item xs={2}>
+          <Item>
+
+          </Item>
+        </Grid>
+        <Grid item xs={10}>
+          
+          <Layout>
+      <DivSlide>
+      <CardProduct1 />
+      </DivSlide>
+      <DivSlide>
+      <CardProduct2 />
+      </DivSlide>
+      <DivSlide>
+      <CardProduct3 />
+      </DivSlide>
+      <DivSlide>
+      <CardProduct4 />
+      </DivSlide>
+    </Layout>
+    <Layout>
+    <DivSlide>
+      <CardProduct5 />
+      </DivSlide>
+      <DivSlide>
+      <CardProduct6 />
+      </DivSlide>
+      <DivSlide>
+      <CardProduct7 />
+      </DivSlide>
+      <DivSlide>
+      <CardProduct8 />
+      </DivSlide>
+    </Layout>
+          
+        </Grid>
+        </Grid>
+        <Footer />
+        </Box>
+        
+  );
+};
 
 
-const ContainerDiv =styled.div ` 
-margin: 20px 20px 10px 20px;
-justify-content: flex-start;
-border-radius: 10px;
-`
-const Layout = styled.div `
+// Styled component  
+const Layout = Styled.div `
 margin: 20px 20px 10px 20px;
 display: flex;
-justify-content: start;
+justify-content: space-between;
+
 `
-const Divslide70 = styled.ul`
+const DivSlide = Styled.ul `
 margin-right: 10px;
-max-width: 70%;
-display: flex;
-justify-content: center;
 `
-const DivSlide30 = styled.ul `
-margin-right: 10px;
-max-width: 30%;
-`
-export default Farm
+
+export default Farm;

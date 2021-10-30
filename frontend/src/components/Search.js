@@ -29,7 +29,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    paddingLeft: `calc(2em + ${theme.spacing(20)})`,
     transition: theme.transitions.create('width'),
   },
 }));
@@ -43,7 +43,7 @@ export default function SearchAppBar() {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder="Search…........"
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>

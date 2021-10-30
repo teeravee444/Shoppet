@@ -6,7 +6,7 @@ import itemData from '../../config/imagescrool.data'
 
 const Imagescrool = () => {
     return (
-        <ImageList sx={{ width: 500, height: 448 }} cols={3} rowHeight={164}>
+        <ImageList sx={{ width: 500, height: 400 }} cols={3} rowHeight={164}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img

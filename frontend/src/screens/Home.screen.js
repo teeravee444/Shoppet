@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+
 import styled from 'styled-components';
 import Theme from '../config/Theme.json'
 import SwipeableTextMobileStepper from "../components/Stepper/Stepper.home";
+import CardProduct  from '../components/Card/CardProduct';
 //import MUI
-import countries from "../config/countries";
-import AutoComplete from '../components/inp/AutoComplete'
-import AutoComplete1 from '../components/inp/AutoComplete1'
-import {Box,Paper,Grid} from '@mui/material';
+
 
 import Imagescrool from "../components/imgscrool/Imagescrool";
 
@@ -18,7 +16,7 @@ import Imagescrool from "../components/imgscrool/Imagescrool";
   
 // }));
 const Home = () => {
-    const [data, setData] = useState()
+    
 
   return (
     // <div>
@@ -45,14 +43,49 @@ const Home = () => {
     
 
     // </div>
-    <Layout Theme={Theme}>
+    <ContainerDiv Theme={Theme}>
+
+    <Layout>
       <DivSlide>
         <SwipeableTextMobileStepper />
+        
       </DivSlide>
       <DivSlide>
         <Imagescrool />
       </DivSlide>
     </Layout>
+    <Layout>
+      <DivSlide>
+      <CardProduct />
+      </DivSlide>
+      <DivSlide>
+      <CardProduct />
+      </DivSlide>
+      <DivSlide>
+      <CardProduct />
+      </DivSlide>
+      <DivSlide>
+      <CardProduct />
+      </DivSlide>
+    </Layout>
+    <Layout>
+    <DivSlide>
+      <CardProduct />
+      </DivSlide>
+      <DivSlide>
+      <CardProduct />
+      </DivSlide>
+      <DivSlide>
+      <CardProduct />
+      </DivSlide>
+      <DivSlide>
+      <CardProduct />
+      </DivSlide>
+    </Layout>
+    
+
+
+    </ContainerDiv>
   );
 };
 
@@ -60,10 +93,17 @@ const Layout = styled.div `
 margin: 20px 20px 10px 20px;
 display: flex;
 justify-content: space-between;
-border: ${props => props.Theme.border};
+
 `
 const DivSlide = styled.ul `
 margin-right: 10px;
+`
+
+const ContainerDiv =styled.div ` 
+margin: 20px 20px 10px 20px;
+justify-content: flex-start;
+/* border-radius: ${props => props.Theme.border}; */
+border-radius: 10px;
 `
 
 export default Home;

@@ -83,9 +83,6 @@ const Home = () => {
       <CardProduct8 />
       </DivSlide>
     </Layout>
-    
-
-
     </ContainerDiv>
   );
 };

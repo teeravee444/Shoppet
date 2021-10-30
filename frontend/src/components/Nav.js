@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import theme from '../config/Theme.json'
 import Drawer from '../components/drawer/RightDrawer'
+import Search from '../components/Search'
 const Nav = () => {
     return (
         <Navbar theme={theme}>
@@ -18,7 +19,7 @@ const Nav = () => {
                     <NavLink to="/about" activeClassName="activeTab" exact>About</NavLink>
                 </li>
             </Menu>
-
+              <Search />
             {/* Auth Routes */}
             <Menu theme={theme}>
                 <li>

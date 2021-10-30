@@ -14,22 +14,22 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
+     
     imgPath:
       'https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg',
   },
   {
-    label: 'Bird',
+    
     imgPath:
       'https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg',
   },
   {
-    label: 'Bali, Indonesia',
+    
     imgPath:
       'https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg',
   },
   {
-    label: 'Goč, Serbia',
+    
     imgPath:
       'https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg',
   },
@@ -54,19 +54,7 @@ function SwipeableTextMobileStepper() {
 
   return (
     <Box sx={{ maxWidth: 900, flexGrow: 1 }}>
-      <Paper
-        square
-        elevation={0}
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          height: 50,
-          pl: 2,
-          bgcolor: 'background.default',
-        }}
-      >
-        <Typography>{images[activeStep].label}</Typography>
-      </Paper>
+      
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -86,7 +74,7 @@ function SwipeableTextMobileStepper() {
                   width: '100%',
                 }}
                 src={step.imgPath}
-                alt={step.label}
+                
               />
             ) : null}
           </div>

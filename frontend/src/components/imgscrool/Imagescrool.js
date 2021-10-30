@@ -2,11 +2,11 @@ import React from 'react'
 //import scrool 
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import itemData from '../../config/imagescrool'
+import itemData from '../../config/imagescrool.data'
 
 const Imagescrool = () => {
     return (
-        <ImageList sx={{ width: 500, height: 500 }} cols={3} rowHeight={164}>
+        <ImageList sx={{ width: 500, height: 448 }} cols={3} rowHeight={164}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img

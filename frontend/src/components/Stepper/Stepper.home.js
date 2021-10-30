@@ -1,35 +1,31 @@
-import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import MobileStepper from '@mui/material/MobileStepper';
-import Button from '@mui/material/Button';
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
+import * as React from "react";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import MobileStepper from "@mui/material/MobileStepper";
+import Button from "@mui/material/Button";
+import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+import SwipeableViews from "react-swipeable-views";
+import { autoPlay } from "react-swipeable-views-utils";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-     
     imgPath:
-      'https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg',
+      "https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg",
   },
   {
-    
     imgPath:
-      'https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg',
+      "https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg",
   },
   {
-    
     imgPath:
-      'https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg',
+      "https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg",
   },
   {
-    
     imgPath:
-      'https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg',
+      "https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg",
   },
 ];
 
@@ -52,9 +48,8 @@ function SwipeableTextMobileStepper() {
 
   return (
     <Box sx={{ maxWidth: 900, flexGrow: 1 }}>
-      
       <AutoPlaySwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
@@ -66,13 +61,12 @@ function SwipeableTextMobileStepper() {
                 component="img"
                 sx={{
                   height: 400,
-                  display: 'block',
+                  display: "block",
                   maxWidth: 900,
-                  overflow: 'hidden',
-                  width: '100%',
+                  overflow: "hidden",
+                  width: "100%",
                 }}
                 src={step.imgPath}
-                
               />
             ) : null}
           </div>
@@ -89,7 +83,7 @@ function SwipeableTextMobileStepper() {
             disabled={activeStep === maxSteps - 1}
           >
             Next
-            {theme.direction === 'rtl' ? (
+            {theme.direction === "rtl" ? (
               <KeyboardArrowLeft />
             ) : (
               <KeyboardArrowRight />
@@ -98,7 +92,7 @@ function SwipeableTextMobileStepper() {
         }
         backButton={
           <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === 'rtl' ? (
+            {theme.direction === "rtl" ? (
               <KeyboardArrowRight />
             ) : (
               <KeyboardArrowLeft />

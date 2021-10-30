@@ -2,7 +2,8 @@
 import styled from 'styled-components';
 import Theme from '../config/Theme.json'
 import SwipeableTextMobileStepper from "../components/Stepper/Stepper.home";
-import CardProduct  from '../components/Card/CardProduct';
+import {CardProduct1,CardProduct2,CardProduct3,CardProduct4,CardProduct5,CardProduct6,CardProduct7,CardProduct8}  from '../components/Card/CardProduct';
+
 //import MUI
 
 
@@ -56,30 +57,30 @@ const Home = () => {
     </Layout>
     <Layout>
       <DivSlide>
-      <CardProduct />
+      <CardProduct1 />
       </DivSlide>
       <DivSlide>
-      <CardProduct />
+      <CardProduct2 />
       </DivSlide>
       <DivSlide>
-      <CardProduct />
+      <CardProduct3 />
       </DivSlide>
       <DivSlide>
-      <CardProduct />
+      <CardProduct4 />
       </DivSlide>
     </Layout>
     <Layout>
     <DivSlide>
-      <CardProduct />
+      <CardProduct5 />
       </DivSlide>
       <DivSlide>
-      <CardProduct />
+      <CardProduct6 />
       </DivSlide>
       <DivSlide>
-      <CardProduct />
+      <CardProduct7 />
       </DivSlide>
       <DivSlide>
-      <CardProduct />
+      <CardProduct8 />
       </DivSlide>
     </Layout>
     

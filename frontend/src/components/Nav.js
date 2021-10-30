@@ -3,18 +3,7 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import theme from '../config/Theme.json'
 import Drawer from '../components/drawer/RightDrawer'
-import SvgIcon from '@mui/material/SvgIcon';
 
-
-
-
-function HomeIcon(props) {
-    return (
-      <SvgIcon {...props}>
-        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-      </SvgIcon>
-    );
-  }
 const Nav = () => {
     
     return (
@@ -23,7 +12,7 @@ const Nav = () => {
             {/* Routing */}
             <Menu theme={theme}>
                 <li>
-                    <NavLink to="/" activeClassName="activeTab" exact><HomeIcon color="white" sx={{fontSize: 70}} /></NavLink>
+                    <NavLink to="/" activeClassName="activeTab" exact>Home</NavLink>
                 </li>
                 <li>
                     <NavLink to="/farm" activeClassName="activeTab" exact>Farm</NavLink>
@@ -32,7 +21,7 @@ const Nav = () => {
                     <NavLink to="/about" activeClassName="activeTab" exact>About</NavLink>
                 </li>
             </Menu>
-
+              <Search />
             {/* Auth Routes */}
             <Menu theme={theme}>
                 <li>

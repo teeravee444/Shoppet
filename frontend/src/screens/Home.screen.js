@@ -2,13 +2,13 @@
 import styled from 'styled-components';
 import Theme from '../config/Theme.json'
 import SwipeableTextMobileStepper from "../components/Stepper/Stepper.home";
-
+import {CardProduct1,CardProduct2,CardProduct3,CardProduct4,CardProduct5,CardProduct6,CardProduct7,CardProduct8}  from '../components/Card/CardProduct';
 
 //import MUI
 
 
 import Imagescrool from "../components/imgscrool/Imagescrool";
-import Footer from '../components/Footer';
+
 
 //Userstate and api 
 import React, { useState } from "react";
@@ -22,7 +22,13 @@ import { Overlay } from "../components/Cart/Overlay";
 
 import { GlobalStyles, lightGray } from "../components/Cart/GlobalStyles";
 
-
+// const Item = styled(Paper)(({ theme }) => ({
+//   ...theme.typography.body2,
+//   alignItems: 'center',
+//   textAlign: 'center',
+  
+  
+// }));
 const Home = () => {
   const [cart, setCart] = useState([]);
   const [items, setItems] = useState(API);
@@ -150,7 +156,7 @@ const Home = () => {
     </Layout>
     
     
-      <lightGray />
+      
       <CartDetails
         open={cartOpen}
         onClose={() => isCartOpen(false)}
@@ -172,8 +178,6 @@ const Home = () => {
           addToCart={addToCart}
         />
       </Wrapper>
-      
-      
     
     
     </ContainerDiv>
@@ -206,7 +210,7 @@ const Wrapper = styled.div`
 const H1 = styled.h1`
   padding: 0 10px 50px 10px;
   text-align: center;
-  color: ${lightGray};
+  
   border:  2px solid black;
   
 `;

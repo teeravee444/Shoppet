@@ -18,7 +18,7 @@ export const CartDetails = ({
     <OpenWrapper open={open}>
       <CloseButton onClick={onClose} />
       <Wrapper>
-        {!cart.length && <P>ไม่มีสินค้า</P>}
+        {!cart.length && <P>Cart is empty</P>}
         {!!cart.length && (
           <>
             <CartTotals cart={cart} cartCountTotal={cartCountTotal} />

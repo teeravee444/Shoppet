@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Overlay = styled.div`
-  background-color: rgba(128, 128, 128, 0.5);
-  position: fixed;
+  
+  position: absolute;
   z-index: 2;
-  height: 100vh;
-  width: 100vw;
+  height: 1200px;
+  width: 100%;
   overflow: hidden;
   display: ${({ open }) => (open ? "block" : "none")};
 `;

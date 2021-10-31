@@ -39,17 +39,32 @@ class SignUpForm extends Component {
         <form onSubmit={this.handleSubmit} className="formFields">
           <div className="formField">
             <label className="formFieldLabel" htmlFor="name">
-              Full Name
+               Name
             </label>
             <input
               type="text"
               id="name"
               className="formFieldInput"
-              placeholder="Enter your full name"
+              placeholder="Enter your  name"
               name="name"
               value={this.state.name}
               onChange={this.handleChange}
             />
+          </div>
+          <div className="formField">
+            <label className="formFieldLabel" htmlFor="lastname">
+               lastname
+            </label>
+            <input
+              type="text"
+              id="lastname"
+              className="formFieldInput"
+              placeholder="Enter your  lastname"
+              name="lastname"
+              value={this.state.lastname}
+              onChange={this.handleChange}
+            />
+            
           </div>
           <div className="formField">
             <label className="formFieldLabel" htmlFor="password">

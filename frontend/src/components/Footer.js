@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import React from 'react'
+import Box from '@mui/material/Box';
+
+
 
 const Footer = () => {
     return (
@@ -19,6 +22,7 @@ const Footer = () => {
         
       </FigFooter>
     </Footerdiv>
+        
     )
 }
 
@@ -42,7 +46,6 @@ font-weight: bold;
 font-size: 100%;
 :hover{
             background: white;
-            
             color: red;
             transition: 1.25s;
         }

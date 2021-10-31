@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 import Theme from '../config/Theme.json'
 import SwipeableTextMobileStepper from "../components/Stepper/Stepper.home";
-import {CardProduct1,CardProduct2,CardProduct3,CardProduct4,CardProduct5,CardProduct6,CardProduct7,CardProduct8}  from '../components/Card/CardProduct';
+
 
 //import MUI
 
@@ -10,15 +10,107 @@ import {CardProduct1,CardProduct2,CardProduct3,CardProduct4,CardProduct5,CardPro
 import Imagescrool from "../components/imgscrool/Imagescrool";
 import Footer from '../components/Footer';
 
-// const Item = styled(Paper)(({ theme }) => ({
-//   ...theme.typography.body2,
-//   alignItems: 'center',
-//   textAlign: 'center',
-  
-  
-// }));
+//Userstate and api 
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+
+import API from "../components/Cart/mockAPI";
+import { ListedItems } from "../components/Cart/ListedItems";
+import { FixedCart } from "../components/Cart/FixedCart";
+import { CartDetails } from "../components/Cart/Carddetails";
+import { Overlay } from "../components/Cart/Overlay";
+
+import { GlobalStyles, lightGray } from "../components/Cart/GlobalStyles";
+
+
 const Home = () => {
-    
+  const [cart, setCart] = useState([]);
+  const [items, setItems] = useState(API);
+  const [cartOpen, isCartOpen] = useState(false);
+
+  const addToCart = i => {
+    setItems(state =>
+      state.map((item, p) => {
+        if (i === p) {
+          setCart([
+            ...cart,
+            { name: item.name, price: item.price, quantity: item.quantity }
+          ]);
+          return { ...item, inCart: true };
+        }
+        return item;
+      })
+    );
+  };
+
+  const increaseQuantity = {
+    inCart: i => {
+      setCart(state =>
+        state.map((item, o) => {
+          if (i === o && item.quantity < 10) {
+            return { ...item, quantity: item.quantity + 1 };
+          }
+          return item;
+        })
+      );
+    },
+    inItems: i => {
+      setItems(state =>
+        state.map((item, o) => {
+          if (o === i && item.quantity < 10) {
+            return { ...item, quantity: item.quantity + 1 };
+          }
+          return item;
+        })
+      );
+    }
+  };
+
+  const decreaseQuantity = {
+    inCart: i => {
+      setCart(prevCart =>
+        prevCart.map((item, o) => {
+          if (i === o && item.quantity > 1) {
+            return { ...item, quantity: item.quantity - 1 };
+          }
+          return item;
+        })
+      );
+    },
+    inItems: i => {
+      setItems(state =>
+        state.map((item, o) => {
+          if (i === o && item.quantity > 1) {
+            return { ...item, quantity: item.quantity - 1 };
+          }
+          return item;
+        })
+      );
+    }
+  };
+
+  const removeFromCart = i => {
+    let chosenItem, index;
+    index = 0;
+    while (index < cart.length) {
+      if (index === i) {
+        chosenItem = cart[index].name;
+        break;
+      }
+      index++;
+    }
+    setCart(state => state.filter(item => chosenItem !== item.name));
+    setItems(state =>
+      state.map(item => {
+        if (item.name === chosenItem) {
+          return { ...item, inCart: false, quantity: 1 };
+        }
+        return item;
+      })
+    );
+  };
+
+  const cartCountTotal = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
     // <div>
@@ -56,35 +148,34 @@ const Home = () => {
         <Imagescrool />
       </DivSlide>
     </Layout>
-    <Layout>
-      <DivSlide>
-      <CardProduct1 />
-      </DivSlide>
-      <DivSlide>
-      <CardProduct2 />
-      </DivSlide>
-      <DivSlide>
-      <CardProduct3 />
-      </DivSlide>
-      <DivSlide>
-      <CardProduct4 />
-      </DivSlide>
-    </Layout>
-    <Layout>
-    <DivSlide>
-      <CardProduct5 />
-      </DivSlide>
-      <DivSlide>
-      <CardProduct6 />
-      </DivSlide>
-      <DivSlide>
-      <CardProduct7 />
-      </DivSlide>
-      <DivSlide>
-      <CardProduct8 />
-      </DivSlide>
-    </Layout>
-    <Footer />
+    
+    
+      <lightGray />
+      <CartDetails
+        open={cartOpen}
+        onClose={() => isCartOpen(false)}
+        cart={cart}
+        increaseQ={increaseQuantity.inCart}
+        decreaseQ={decreaseQuantity.inCart}
+        cartCountTotal={cartCountTotal}
+        removeFromCart={removeFromCart}
+      />
+      <FixedCart onOpen={() => isCartOpen(true)} cartItems={cartCountTotal} />
+      <Overlay onClick={() => isCartOpen(false)} open={cartOpen} />
+
+      <Wrapper>
+        <H1>ProDuct My me</H1>
+        <ListedItems
+          items={items}
+          increaseCount={increaseQuantity.inItems}
+          decreaseCount={decreaseQuantity.inItems}
+          addToCart={addToCart}
+        />
+      </Wrapper>
+      
+      
+    
+    
     </ContainerDiv>
   );
 };
@@ -105,5 +196,19 @@ justify-content: flex-start;
 /* border-radius: ${props => props.Theme.border}; */
 border-radius: 10px;
 `
+
+const Wrapper = styled.div`
+  padding: 75px 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+`;
+const H1 = styled.h1`
+  padding: 0 10px 50px 10px;
+  text-align: center;
+  color: ${lightGray};
+  border:  2px solid black;
+  
+`;
 
 export default Home;

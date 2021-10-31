@@ -27,10 +27,9 @@ const Nav = () => {
                 <li>
                     <NavLink to="/login" activeClassName="activeTab" exact>Login</NavLink>
                 </li>
-               
-                
-                <Drawer />
-
+                <li>
+                    
+                </li>
             </Menu>
         </Navbar>
     )

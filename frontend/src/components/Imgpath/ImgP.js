@@ -13,19 +13,23 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const images = [
   {
     imgPath:
-      "https://s.isanook.com/hi/0/ud/289/1448949/untitled-1.jpg",
+      "https://medthai.com/images/2017/03/%E0%B8%9C%E0%B8%B1%E0%B8%81.jpg",
   },
   {
     imgPath:
-      "https://women.mthai.com/app/uploads/0206/09/Easier-Thumb.jpg",
+      "https://medthai.com/images/2017/03/%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89.jpg",
   },
   {
     imgPath:
-      "https://lh3.googleusercontent.com/proxy/sDkVBYsXpUHXn2vmGa_HmYIW8pQ51YOZpuxyswUw8UoRBnk1Ck3xu0RRmq04J8YeIWYFI9xnNvgjKAqQJ2lqA_ZgmN5D0_XJj2nWmKSmCFo6TxNYYBnykw",
+      "https://obs.line-scdn.net/0hNNWq9Dm-EWFqCD74AgFuNlBeEg5ZZAJiDj5AYjZmT1VPbwIwUmoKD0kKH1VPb1Y_BGZXA0cIClBBOgY-BGsK/w644",
   },
   {
     imgPath:
-      "https://inwfile.com/s-cx/6jwwkb.jpg",
+      "https://food.mthai.com/app/uploads/2017/11/Frozen-Cow-1.jpg",
+  },
+  {
+    imgPath:
+      "https://s359.kapook.com/pagebuilder/d88bb02b-9d80-4277-95f0-7dcc97c0756b.jpg",
   },
 ];
 

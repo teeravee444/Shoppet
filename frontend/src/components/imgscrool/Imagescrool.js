@@ -13,15 +13,9 @@ const Imagescrool = () => {
           <img
             src={`${itemlist.img}?w=164&h=164&fit=crop&auto=format`}
             srcSet={`${itemlist.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-            
             loading="lazy"
-            
           />
         </ImageListItem>
-        
-       
-       
-
       ))}
     </ImageList>
     )

@@ -39,18 +39,17 @@ const Farm = () => {
         <Grid item xs={2}>
           <Item>
           <FormControl component="fieldset">
-      <FormLabel component="legend">Category</FormLabel>
+      <FormLabel component="legend">หมวดหมู่</FormLabel>
       <RadioGroup
         aria-label="category"
         defaultValue="female"
         name="radio-buttons-group"
       >
-        <FormControlLabel value="female" control={<Radio />} label="Female" />
-        <FormControlLabel value="male" control={<Radio />} label="Male" />
-        <FormControlLabel value="other" control={<Radio />} label="Other" />
-        <FormControlLabel value="ae" control={<Radio />} label="Female" />
-        <FormControlLabel value="za" control={<Radio />} label="Male" />
-        <FormControlLabel value="xa" control={<Radio />} label="Other" />
+        <FormControlLabel value="female" control={<Radio />} label="ผัก" />
+        <FormControlLabel value="male" control={<Radio />} label="ผลไม้" />
+        <FormControlLabel value="other" control={<Radio />} label="เนื้อสัตว์" />
+        <FormControlLabel value="ae" control={<Radio />} label="เนื้อแช่แข็ง" />
+        <FormControlLabel value="za" control={<Radio />} label="เบเกอรี่" />
       </RadioGroup>
     </FormControl>
           </Item>

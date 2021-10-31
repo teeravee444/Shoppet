@@ -13,19 +13,19 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const images = [
   {
     imgPath:
-      "https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg",
+      "https://www.prachachat.net/wp-content/uploads/2020/04/86609129_501295187240660_5516651274260447232_n-728x410-728x410.jpg",
   },
   {
     imgPath:
-      "https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg",
+      "https://review.thaiware.com/upload_misc/review/2019_10/images/1645_19101117012266_104.jpg",
   },
   {
     imgPath:
-      "https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0WizjORCTv9I4Do_jX5N96VLV4YemHe772Q&usqp=CAU",
   },
   {
     imgPath:
-      "https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg",
+      "https://cdn.chiangmainews.co.th/wp-content/uploads/2016/05/07164009/%E0%B8%A2%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%94%E0%B8%A0%E0%B8%B1%E0%B8%A2.jpg",
   },
 ];
 

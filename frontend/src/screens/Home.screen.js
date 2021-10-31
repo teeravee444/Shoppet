@@ -142,13 +142,11 @@ const Home = () => {
     <Layout>
       <DivSlide>
         <SwipeableTextMobileStepper />
-        
       </DivSlide>
       <DivSlide>
         <Imagescrool />
       </DivSlide>
     </Layout>
-    
     
       <lightGray />
       <CartDetails
@@ -172,10 +170,6 @@ const Home = () => {
           addToCart={addToCart}
         />
       </Wrapper>
-      
-      
-    
-    
     </ContainerDiv>
   );
 };

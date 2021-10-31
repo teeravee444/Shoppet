@@ -13,19 +13,19 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const images = [
   {
     imgPath:
-      "https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg",
+      "https://s.isanook.com/hi/0/ud/289/1448949/untitled-1.jpg",
   },
   {
     imgPath:
-      "https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg",
+      "https://women.mthai.com/app/uploads/0206/09/Easier-Thumb.jpg",
   },
   {
     imgPath:
-      "https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg",
+      "https://lh3.googleusercontent.com/proxy/sDkVBYsXpUHXn2vmGa_HmYIW8pQ51YOZpuxyswUw8UoRBnk1Ck3xu0RRmq04J8YeIWYFI9xnNvgjKAqQJ2lqA_ZgmN5D0_XJj2nWmKSmCFo6TxNYYBnykw",
   },
   {
     imgPath:
-      "https://upload.wikimedia.org/wikipedia/commons/9/98/800px-IMG_Edgeworthstown5469.jpg",
+      "https://inwfile.com/s-cx/6jwwkb.jpg",
   },
 ];
 

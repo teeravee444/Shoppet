@@ -19,6 +19,11 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import Footer from "../components/Footer";
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 
 // MUI layout 
 const Item = styled(Paper)(({ theme }) => ({
@@ -33,11 +38,24 @@ const Farm = () => {
          <Grid container spacing={2}>
         <Grid item xs={2}>
           <Item>
-
+          <FormControl component="fieldset">
+      <FormLabel component="legend">Category</FormLabel>
+      <RadioGroup
+        aria-label="category"
+        defaultValue="female"
+        name="radio-buttons-group"
+      >
+        <FormControlLabel value="female" control={<Radio />} label="Female" />
+        <FormControlLabel value="male" control={<Radio />} label="Male" />
+        <FormControlLabel value="other" control={<Radio />} label="Other" />
+        <FormControlLabel value="ae" control={<Radio />} label="Female" />
+        <FormControlLabel value="za" control={<Radio />} label="Male" />
+        <FormControlLabel value="xa" control={<Radio />} label="Other" />
+      </RadioGroup>
+    </FormControl>
           </Item>
         </Grid>
         <Grid item xs={10}>
-          
           <Layout>
       <DivSlide>
       <CardProduct1 />
@@ -66,7 +84,6 @@ const Farm = () => {
       <CardProduct8 />
       </DivSlide>
     </Layout>
-          
         </Grid>
         </Grid>
         <Footer />

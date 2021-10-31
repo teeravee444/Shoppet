@@ -15,7 +15,7 @@ export const ListedItems = ({
     {items.map((item, i) => (
       <Column key={item.name}>
         <H4>{item.name}</H4>
-        <P>${item.price}</P>
+        <P>{item.price} บาท / {item.type}</P>
 
         {!item.inCart && (
           <div>

@@ -12,8 +12,8 @@ export const CartInfo = ({ cart, increaseQ, decreaseQ, removeFromCart }) => (
     {cart.map((item, i) => (
       <DetailColumn key={item.name}>
         <P>
-          {item.name} <VerticalBar /> {item.quantity} x ${item.price} <Arrow />{" "}
-          ${numberFormat(item.price * item.quantity)}
+          {item.name} <VerticalBar /> {item.quantity} x {item.price}บาท <Arrow />{" "}
+          {numberFormat(item.price * item.quantity)}บาท
         </P>
 
         <CartButtons
@@ -23,7 +23,7 @@ export const CartInfo = ({ cart, increaseQ, decreaseQ, removeFromCart }) => (
         />
       </DetailColumn>
     ))}
-    <CheckoutButton>Checkout</CheckoutButton>
+    <CheckoutButton>ชำระสินค้า</CheckoutButton>
   </>
 );
 const DetailColumn = styled.div`

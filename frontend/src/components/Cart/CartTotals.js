@@ -11,8 +11,8 @@ export const CartTotals = ({ cart, cartCountTotal }) => {
 
   return (
     <H2>
-      Items: {cartCountTotal} <VerticalBar /> Total Price: $
-      {numberFormat(cartPriceTotal)}
+      จำนวนสินค้า: {cartCountTotal} <VerticalBar /> ราคาทั้งหมด: 
+      {numberFormat(cartPriceTotal ) } บาท
     </H2>
   );
 };

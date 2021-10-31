@@ -1,31 +1,17 @@
-
-import styled from 'styled-components';
-import Theme from '../config/Theme.json'
-import SwipeableTextMobileStepper from "../components/Stepper/Stepper.home";
-
-
-//import MUI
-
-
-import Imagescrool from "../components/imgscrool/Imagescrool";
-import Footer from '../components/Footer';
-
+import styled from 'styled-components'
 //Userstate and api 
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-import API from "../components/Cart/mockAPI";
-import { ListedItems } from "../components/Cart/ListedItems";
-import { FixedCart } from "../components/Cart/FixedCart";
-import { CartDetails } from "../components/Cart/Carddetails";
-import { Overlay } from "../components/Cart/Overlay";
+import API from "./mockAPI";
+import { ListedItems } from "./ListedItems";
+import { FixedCart } from "./FixedCart";
+import { CartDetails } from "./Carddetails";
+import { Overlay } from "./Overlay";
 
-import { GlobalStyles, lightGray } from "../components/Cart/GlobalStyles";
-import Cartcomponent from '../components/Cart/Cartcomponent';
-
-
-const Home = () => {
-  const [cart, setCart] = useState([]);
+import { GlobalStyles, lightGray } from "./GlobalStyles";
+const Cartcomponent = () => {
+    const [cart, setCart] = useState([]);
   const [items, setItems] = useState(API);
   const [cartOpen, isCartOpen] = useState(false);
 
@@ -112,64 +98,46 @@ const Home = () => {
   };
 
   const cartCountTotal = cart.reduce((acc, item) => acc + item.quantity, 0);
+    return (
+        <>
+            <lightGray />
+      <CartDetails
+        open={cartOpen}
+        onClose={() => isCartOpen(false)}
+        cart={cart}
+        increaseQ={increaseQuantity.inCart}
+        decreaseQ={decreaseQuantity.inCart}
+        cartCountTotal={cartCountTotal}
+        removeFromCart={removeFromCart}
+      />
+      <FixedCart onOpen={() => isCartOpen(true)} cartItems={cartCountTotal} />
+      <Overlay onClick={() => isCartOpen(false)} open={cartOpen} />
 
-  return (
-    // <div>
-    //   {/* <h1>Home Page</h1> */}
-    //   {/* <p>Country: {data}</p>
-    //   <AutoComplete data={countries} val={data} changeVal={()=>setData()} />
-    //   <AutoComplete1 /> */}
-    //   {/* <Box sx={{ flexGrow: 1 }} >
-    //   <Grid container spacing={3}>
-    //     <Grid item xs= {5}>
-    //       <Item>
-
-    //       </Item>
-    //     </Grid>
+      <Wrapper>
         
-    //     <Grid item xs = {7}>
-    //       <Item>
-    //       <Imagescrool />
-    //       </Item>
-    //     </Grid>
-    //   </Grid>
-    // </Box> */}
+        <ListedItems
+          items={items}
+          increaseCount={increaseQuantity.inItems}
+          decreaseCount={decreaseQuantity.inItems}
+          addToCart={addToCart}
+        />
+      </Wrapper>
+        </>
+    )
+}
 
-    
+export default Cartcomponent
 
-    // </div>
-    <ContainerDiv Theme={Theme}>
-
-    <Layout>
-      <DivSlide>
-        <SwipeableTextMobileStepper />
-      </DivSlide>
-      <DivSlide>
-        <Imagescrool />
-      </DivSlide>
-    </Layout>
-    <Cartcomponent />
-    </ContainerDiv>
-  );
-};
-
-const Layout = styled.div `
-margin: 20px 20px 10px 20px;
-display: flex;
-justify-content: space-between;
-
-`
-const DivSlide = styled.ul `
-margin-right: 10px;
-`
-
-const ContainerDiv =styled.div ` 
-margin: 20px 20px 10px 10px;
-justify-content: flex-start;
-/* border-radius: ${props => props.Theme.border}; */
-border-radius: 10px;
-`
-
-
-
-export default Home;
+const Wrapper = styled.div`
+  padding: 75px 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+`;
+const H1 = styled.h1`
+  padding: 0 10px 50px 10px;
+  text-align: center;
+  color: ${lightGray};
+  border:  2px solid black;
+  
+`;

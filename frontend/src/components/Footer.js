@@ -1,57 +1,77 @@
-import styled from 'styled-components';
-import React from 'react'
-
-
-
-
+import React from "react";
+import {
+  Box,
+  Container,
+  Row,
+  Column,
+  FooterLink,
+  Heading,
+} from "../components/Stepper/FooterStyles";
+  
 const Footer = () => {
-    return (
-        <Footerdiv>
-      <FigFooter>
-        <p>ศูนย์ช่วยเหลือ</p>
-        <p>About</p>
-        <p>tel: 090-895-9301</p>
-        
-      </FigFooter>
-      <FigFooter>
-        <p>วิธีการชำระเงิน</p>
-        
-      </FigFooter>
-      <FigFooter>
-        <p>ติดตามเรา</p>
-        
-      </FigFooter>
-    </Footerdiv>
-        
-    )
-}
-
-const Footerdiv = styled.footer `
-margin-bottom: 0%;
-background-color: white;
-height: 200px;
-display: flex;
-justify-content: space-between;
-
-
-
-`
-const FigFooter = styled.div `
-margin: 20px 20px ;
-
-p{
-  color:  black;
-text-align: center;
-font-weight: bold;
-font-size: 100%;
-:hover{
-            background: white;
-            color: red;
-            transition: 1.25s;
-        }
-}
-
-
-
-`
-export default Footer
+  return (
+    <Box>
+      <h1 style={{ color: "#fff", 
+                   textAlign: "center", 
+                   marginTop: "-50px" }}>
+        GeeksforGeeks: A Computer Science Portal for Geeks
+      </h1>
+      <Container>
+        <Row>
+          <Column>
+            <Heading>About Us</Heading>
+            <FooterLink href="#">Aim</FooterLink>
+            <FooterLink href="#">Vision</FooterLink>
+            <FooterLink href="#">Testimonials</FooterLink>
+          </Column>
+          <Column>
+            <Heading>Services</Heading>
+            <FooterLink href="#">Writing</FooterLink>
+            <FooterLink href="#">Internships</FooterLink>
+            <FooterLink href="#">Coding</FooterLink>
+            <FooterLink href="#">Teaching</FooterLink>
+          </Column>
+          <Column>
+            <Heading>Contact Us</Heading>
+            <FooterLink href="#">Uttar Pradesh</FooterLink>
+            <FooterLink href="#">Ahemdabad</FooterLink>
+            <FooterLink href="#">Indore</FooterLink>
+            <FooterLink href="#">Mumbai</FooterLink>
+          </Column>
+          <Column>
+            <Heading>Social Media</Heading>
+            <FooterLink href="#">
+              <i className="fab fa-facebook-f">
+                <span style={{ marginLeft: "10px" }}>
+                  Facebook
+                </span>
+              </i>
+            </FooterLink>
+            <FooterLink href="#">
+              <i className="fab fa-instagram">
+                <span style={{ marginLeft: "10px" }}>
+                  Instagram
+                </span>
+              </i>
+            </FooterLink>
+            <FooterLink href="#">
+              <i className="fab fa-twitter">
+                <span style={{ marginLeft: "10px" }}>
+                  Twitter
+                </span>
+              </i>
+            </FooterLink>
+            <FooterLink href="#">
+              <i className="fab fa-youtube">
+                <span style={{ marginLeft: "10px" }}>
+                  Youtube
+                </span>
+              </i>
+            </FooterLink>
+          </Column>
+        </Row>
+      </Container>
+    </Box>
+  );
+};
+export default Footer;
